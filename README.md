@@ -1,1 +1,3 @@
-# Responsive_nav_project2
+# responsive_nav_project2
+
+Responsive Nav Study

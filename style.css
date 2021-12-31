@@ -1,0 +1,117 @@
+:root {
+  --nav-bg-color: #fafafa;
+  --logo-color: #000051;
+  --base-font-color: black;
+}
+
+li {
+  /*
+    ul의 li에는 bulleted가 생기는데 
+    list-style: none으로 지정하면 bulleted가 사라진다.
+    모든 ul의 li에 bulleted를 없애고 싶다면 li 태그에 이 속성을 지정한다.
+    */
+  list-style: none;
+}
+
+a {
+  /*
+  text-decoration: none으로 지정하면 a태그 텍스트의 밑줄이 사라진다.
+  모든 a 태그의 밑줄을 없애고 싶다면 이 속성을 a 태그에 지정한다.
+    */
+  text-decoration: none;
+  color: var(--base-font-color);
+}
+
+ul {
+  /*
+    ul태그는 기본적으로 왼쪽에 padding 40px을 가지고 생성된다.
+    그래서 ul태그로 생성된 엘리먼트는 처음에 오른쪽으로 밀려있다.
+    그래서 밀려있는 상태로 상태로 만들려는 게 아니라면 ul 태그의 padding을 0으로 지정한다.
+    */
+  padding: 0;
+}
+
+#navBar__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-bg-color);
+  font-family: 'Pushster', cursive;
+}
+
+.logo__title {
+  display: flex;
+  align-items: center;
+}
+.logo__title a {
+  padding: 15px 15px 15px 0px;
+}
+
+.logo {
+  font-size: 40px;
+}
+.logo a {
+  font-size: 40px;
+  color: var(--logo-color);
+}
+
+.title {
+  font-size: 20px;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list li {
+  padding: 10px 20px;
+}
+.menu__list li > a:hover {
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+.icon__list {
+  display: flex;
+}
+
+.icon__list li {
+  padding: 8px 8px;
+}
+
+.toggle__btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #navBar__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu__list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon__list {
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toggle__btn {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+  }
+
+  .menu__list.active,
+  .icon__list.active {
+    display: flex;
+  }
+}
