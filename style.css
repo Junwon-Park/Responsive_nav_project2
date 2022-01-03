@@ -28,7 +28,7 @@ ul {
     그래서 ul태그로 생성된 엘리먼트는 처음에 오른쪽으로 밀려있다.
     그래서 밀려있는 상태로 상태로 만들려는 게 아니라면 ul 태그의 padding을 0으로 지정한다.
     */
-  padding: 0;
+  /* padding: 0; */
 }
 
 #navBar__list {
@@ -42,6 +42,7 @@ ul {
 .logo__title {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 .logo__title a {
   padding: 15px 15px 15px 0px;
@@ -61,6 +62,7 @@ ul {
 
 .menu__list {
   display: flex;
+  padding: 0;
 }
 
 .menu__list li {
@@ -73,6 +75,7 @@ ul {
 
 .icon__list {
   display: flex;
+  padding: 0;
 }
 
 .icon__list li {
